@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0F439A512456F27C00E15417 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F439A502456F27C00E15417 /* GoogleService-Info.plist */; };
+		0FA360BA24629115006A2073 /* GitHubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */; };
+		0FA360BB24629115006A2073 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B524629114006A2073 /* GithubViewController.swift */; };
+		0FA360BC24629115006A2073 /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B624629114006A2073 /* GitHubModel.swift */; };
+		0FA360BD24629115006A2073 /* GitHubSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B724629114006A2073 /* GitHubSafariViewController.swift */; };
+		0FA360BE24629115006A2073 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B824629114006A2073 /* Common.swift */; };
+		0FA360BF24629115006A2073 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B924629115006A2073 /* CollectionViewController.swift */; };
 		0FF4C59E2456A7020034BB80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF4C59D2456A7020034BB80 /* AppDelegate.swift */; };
 		0FF4C5A02456A7020034BB80 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF4C59F2456A7020034BB80 /* ViewController.swift */; };
 		0FF4C5A32456A7020034BB80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF4C5A12456A7020034BB80 /* Main.storyboard */; };
@@ -20,6 +26,12 @@
 
 /* Begin PBXFileReference section */
 		0F439A502456F27C00E15417 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FA360B524629114006A2073 /* GithubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
+		0FA360B624629114006A2073 /* GitHubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
+		0FA360B724629114006A2073 /* GitHubSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubSafariViewController.swift; sourceTree = "<group>"; };
+		0FA360B824629114006A2073 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		0FA360B924629115006A2073 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0FF4C59A2456A7020034BB80 /* IVIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IVIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FF4C59D2456A7020034BB80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FF4C59F2456A7020034BB80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +88,12 @@
 		0FF4C59C2456A7020034BB80 /* IVIS */ = {
 			isa = PBXGroup;
 			children = (
+				0FA360B924629115006A2073 /* CollectionViewController.swift */,
+				0FA360B824629114006A2073 /* Common.swift */,
+				0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */,
+				0FA360B624629114006A2073 /* GitHubModel.swift */,
+				0FA360B724629114006A2073 /* GitHubSafariViewController.swift */,
+				0FA360B524629114006A2073 /* GithubViewController.swift */,
 				0FF4C59D2456A7020034BB80 /* AppDelegate.swift */,
 				0FF4C59F2456A7020034BB80 /* ViewController.swift */,
 				0FF4C5A12456A7020034BB80 /* Main.storyboard */,
@@ -234,6 +252,12 @@
 				0FF4C5A02456A7020034BB80 /* ViewController.swift in Sources */,
 				0FF4C59E2456A7020034BB80 /* AppDelegate.swift in Sources */,
 				0FF4C5B22456AAB80034BB80 /* SignUpViewController.swift in Sources */,
+				0FA360BB24629115006A2073 /* GithubViewController.swift in Sources */,
+				0FA360BF24629115006A2073 /* CollectionViewController.swift in Sources */,
+				0FA360BE24629115006A2073 /* Common.swift in Sources */,
+				0FA360BC24629115006A2073 /* GitHubModel.swift in Sources */,
+				0FA360BA24629115006A2073 /* GitHubCollectionViewCell.swift in Sources */,
+				0FA360BD24629115006A2073 /* GitHubSafariViewController.swift in Sources */,
 				0FF4C5B02456A8400034BB80 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

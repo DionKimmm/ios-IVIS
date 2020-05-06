@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import GoogleSignIn
+import Firebase
 
-class SignInViewController: UIViewController {
+class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
     @IBOutlet weak var buttonSignIn: UIButton!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // 버튼 외관 꾸미기
@@ -24,7 +27,27 @@ class SignInViewController: UIViewController {
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
 
-        // Do any additional setup after loading the view.
+        // MARK : Google Sign In
+        
+        // 다음 구문은 pod 'GoogleSignIn', '~> 5.0' 버전일 경우 (2020년 4월 Firebase 문서에 있는 코드)
+        // GIDSignIn.sharedInstance()?.presentingViewController = self
+        
+        // pod 'GoogleSignIn', '~> 4.1.1' 버전일 경우
+        GIDSignIn.sharedInstance()?.uiDelegate = self
+        
+        // login
+        Auth.auth().addStateDidChangeListener { (user, err) in
+            if user != nil {
+                
+                self.performSegue(withIdentifier: "SignIn", sender: nil)
+            }
+        }
+
+        
+    }
+    
+    @IBAction func buttonGoogleSignIn(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn()
     }
     
     @IBAction func moveToSignUp(_ sender: Any) {
