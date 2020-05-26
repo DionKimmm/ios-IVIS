@@ -35,7 +35,16 @@ class GithubViewController: UIViewController {
         githubList.append(github_kdw15)
         githubList.append(github_pjy)
         
-        userLabel.text = Auth.auth().currentUser?.email
+        
+        if let user = Auth.auth().currentUser {
+            let uid = user.uid
+            let email = user.email
+            let photoURL = user.photoURL
+            userLabel.text = Auth.auth().currentUser?.email
+//            let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
+            
+            
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

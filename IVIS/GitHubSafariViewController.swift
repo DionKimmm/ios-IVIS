@@ -10,13 +10,13 @@ import UIKit
 
 class GitHubSafariViewController: UIViewController {
 
-    @IBOutlet weak var tempLabel: UILabel!
-    var githubModel = GitHubModel()
+//    @IBOutlet weak var tempLabel: UILabel!
+//    var githubModel = GitHubModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tempLabel.text = githubModel.url
+//        tempLabel.text = githubModel.url
 
         // Do any additional setup after loading the view.
     }

@@ -221,7 +221,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6uE-Bj-bwJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-916" y="-970"/>
+            <point key="canvasLocation" x="-886" y="-208"/>
         </scene>
         <!--깃허브-->
         <scene sceneID="5ba-E0-d5g">
@@ -317,7 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kyx-V3-edo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68.115942028985515" y="-970.3125"/>
+            <point key="canvasLocation" x="-36" y="-208"/>
         </scene>
         <!--Git Hub Safari View Controller-->
         <scene sceneID="jf6-pJ-vqn">
@@ -327,15 +327,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KWn-m8-lBS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-64" y="-293"/>
+            <point key="canvasLocation" x="-36" y="554"/>
         </scene>
         <!--기타-->
         <scene sceneID="Q8d-SS-8vO">
             <objects>
-                <viewController id="pTZ-nu-Uov" sceneMemberID="viewController">
+                <viewController id="pTZ-nu-Uov" customClass="ETCViewController" customModule="IVIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MlS-yD-OSA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibJ-tj-v9T">
+                                <rect key="frame" x="173" y="254" width="69" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="사진 올리기"/>
+                                <connections>
+                                    <action selector="profileUpload:" destination="pTZ-nu-Uov" eventType="touchUpInside" id="DXd-V2-RDM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Gax-Hn-7l5"/>
                     </view>
@@ -343,7 +353,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdZ-Df-L0h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="-970"/>
+            <point key="canvasLocation" x="814" y="-208"/>
         </scene>
         <!--회의 일지 작성-->
         <scene sceneID="auL-gR-xwD">
@@ -359,7 +369,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJa-TC-n1i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1742" y="-970"/>
+            <point key="canvasLocation" x="-1710" y="-208"/>
         </scene>
         <!--일정-->
         <scene sceneID="ZLF-Xb-VkT">
@@ -376,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7q-f9-zLq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2493" y="-970"/>
+            <point key="canvasLocation" x="-2462" y="-208"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Stc-9E-OfY">
@@ -397,7 +407,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVB-0N-VFa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-883" y="-1732"/>
+            <point key="canvasLocation" x="-886" y="-920"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F181C05247D127800C2FDC1 /* ETCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F181C04247D127800C2FDC1 /* ETCViewController.swift */; };
 		0F439A512456F27C00E15417 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0F439A502456F27C00E15417 /* GoogleService-Info.plist */; };
 		0FA360BA24629115006A2073 /* GitHubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */; };
 		0FA360BB24629115006A2073 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B524629114006A2073 /* GithubViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F181C04247D127800C2FDC1 /* ETCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ETCViewController.swift; sourceTree = "<group>"; };
 		0F439A502456F27C00E15417 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FA360B524629114006A2073 /* GithubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				0FF4C5AF2456A8400034BB80 /* SignInViewController.swift */,
 				0FF4C5B12456AAB80034BB80 /* SignUpViewController.swift */,
 				0F439A502456F27C00E15417 /* GoogleService-Info.plist */,
+				0F181C04247D127800C2FDC1 /* ETCViewController.swift */,
 			);
 			path = IVIS;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F181C05247D127800C2FDC1 /* ETCViewController.swift in Sources */,
 				0FF4C5A02456A7020034BB80 /* ViewController.swift in Sources */,
 				0FF4C59E2456A7020034BB80 /* AppDelegate.swift in Sources */,
 				0FF4C5B22456AAB80034BB80 /* SignUpViewController.swift in Sources */,
