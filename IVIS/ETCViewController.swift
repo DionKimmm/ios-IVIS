@@ -9,9 +9,13 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseCore
+import FirebaseFirestore
 
 class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    var db: Firestore!
+    
     @IBAction func profileUpload(_ sender: Any) {
         
         let imagePick = UIImagePickerController()
@@ -28,11 +32,47 @@ class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         if let user = Auth.auth().currentUser {
             let uid = user.uid
             let email = user.email
-            let photoURL = user.photoURL
+            let photoURL = user.photoURL?.absoluteString
 //            userLabel.text = Auth.auth().currentUser?.email
 //            //            let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
-//            
+//
+            // 데이터베이스
+//            db = Firestore.firestore()
+//            print("db 접근 완료")
+            // currentUser를 db에 옮기기!
+//            var ref: DocumentReference? = nil
+//            print("빈 레퍼런스 생성 완료")
+//            ref = db.collection("users").addDocument(data: [
+//                "uid": uid,
+//                "email": email!,
+//                "profileImageUrl": photoURL!,
+//                "githubUrl": photoURL!
+//            ]) { err in
+//                if let err = err {
+//                    print("Error adding document: \(err)")
+//                } else {
+//                    print("Document added with ID: \(ref!.documentID)")
+//                }
+//            }
+//            print("데이터 생성 완료")
+//            db.collection("users").document(uid).setData([
+//                "uid": uid,
+//                "email": email!,
+//                "profileImageUrl": photoURL!,
+//                "githubUrl": photoURL!
+//            ]) { err in
+//                if let err = err {
+//                    print("Error writing document: \(err)")
+//                } else {
+//                    print("Document successfully written!")
+//                }
+//            }
+//            print("데이터 생성 완료")
             
+            
+        } else {
+            print("로그인 필요")
+            dismiss(animated: true, completion: nil)
         }
         
         // Do any additional setup after loading the view.
@@ -80,15 +120,17 @@ class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         if let user = Auth.auth().currentUser {
             let uid = user.uid
             let email = user.email
-            let photoURL = user.photoURL
+            let photoURL = user.photoURL?.absoluteString
+            db = Firestore.firestore()
             
             
-            let imageName: String = uid  + "\(Int(NSDate.timeIntervalSinceReferenceDate * 1000)).jpg"
+            let imageName: String = uid + ".jpg"
             
             // 파이어스토리지 저장소 참조 만들기
             let profileRef = Storage.storage()
                 .reference()
                 .child("ios_images")
+                .child(uid)
                 .child(imageName)
             
             // Upload the file to the path
@@ -101,15 +143,35 @@ class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINa
                 let size = metadata.size
                 // You can also access to download URL after upload.
                 profileRef.downloadURL { (url, error) in
-                    guard let downloadURL = url else {
+                    guard let profileURL = url?.absoluteString else {
                         // Uh-oh, an error occurred!
                         return
                     }
+                    // 데이터베이스
+                    
+                    print("db 접근 완료")
+                    self.db.collection("users").document(uid).setData([
+                        "uid": uid,
+                        "email": email!,
+                        "profileImageUrl": profileURL,
+                        "githubUrl": photoURL!
+                    ]) { err in
+                        if let err = err {
+                            print("Error writing document: \(err)")
+                        } else {
+                            print("Document successfully written!")
+                        }
+                    }
+                    print("데이터 생성 완료")
                 }
             }
             
+            
+            
             // dismiss
             dismiss(animated: true, completion: nil)
+        } else {
+        
         }
 
         

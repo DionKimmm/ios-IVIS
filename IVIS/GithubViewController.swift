@@ -20,7 +20,7 @@ class GithubViewController: UIViewController {
         do {
             try Auth.auth().signOut()
         } catch {
-            
+
         }
         dismiss(animated: true, completion: nil)
     }
@@ -35,12 +35,23 @@ class GithubViewController: UIViewController {
         githubList.append(github_kdw15)
         githubList.append(github_pjy)
         
+//        // 로그인 되어 있으면 로그아웃하고 실행하기 - 왜 안되지????
+//        do {
+//            try Auth.auth().signOut()
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
+//        dismiss(animated: true, completion: nil)
         
         if let user = Auth.auth().currentUser {
             let uid = user.uid
             let email = user.email
             let photoURL = user.photoURL
             userLabel.text = Auth.auth().currentUser?.email
+            print(Auth.auth())
+            print(Auth.auth().currentUser)
+            print(Auth.auth().currentUser?.email)
+            print(user.photoURL)
 //            let userInfo = Auth.auth().currentUser?.providerData[indexPath.row]
             
             

@@ -18,6 +18,15 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+                // 로그인 되어 있으면 로그아웃하고 실행하기 - 왜 안되지????
+                do {
+                    try Auth.auth().signOut()
+                } catch let signOutError as NSError {
+                    print ("Error signing out: %@", signOutError)
+                }
+                dismiss(animated: true, completion: nil)
+        
         // 버튼 외관 꾸미기
         // 버튼의 테두리를 네모에서 타원형으로 바꾸기 (곡률을 이용하여)
         buttonSignIn.layer.cornerRadius = buttonSignIn.bounds.size.height / 2
