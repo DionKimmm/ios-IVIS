@@ -26,5 +26,8 @@ struct GitHubModel {
         self.photo = photo ?? UIImage(named: "HasNoPhoto")
         self.url = url
     }
+    
+//    var profileImageUrl :String?
+//    var userName :String?
 
 }

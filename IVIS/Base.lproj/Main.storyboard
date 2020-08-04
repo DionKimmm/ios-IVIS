@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eeg-9z-NfY">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Eeg-9z-NfY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,17 +23,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o81-G9-Z3h">
-                                <rect key="frame" x="30" y="229" width="354" height="22"/>
+                                <rect key="frame" x="30" y="229" width="354" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWM-6Y-avV">
-                                <rect key="frame" x="30" y="272" width="354" height="22"/>
+                                <rect key="frame" x="30" y="273" width="354" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSZ-aX-dzU">
-                                <rect key="frame" x="30" y="324" width="354" height="50"/>
+                                <rect key="frame" x="30" y="325" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="V4e-Gh-rwf"/>
                                 </constraints>
@@ -45,7 +43,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32l-fD-uEy">
-                                <rect key="frame" x="78.5" y="404" width="257" height="35"/>
+                                <rect key="frame" x="78.5" y="405" width="257" height="35"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfX-xd-K71">
                                         <rect key="frame" x="0.0" y="0.0" width="179" height="35"/>
@@ -73,7 +71,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5B-9B-0Pq" customClass="GIDSignInButton">
-                                <rect key="frame" x="92" y="463" width="230" height="48"/>
+                                <rect key="frame" x="92" y="464" width="230" height="48"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k8m-Ud-eOS" customClass="GIDSignInButton">
                                         <rect key="frame" x="0.0" y="0.0" width="230" height="48"/>
@@ -140,24 +138,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgR-Sj-XVn">
-                                <rect key="frame" x="30" y="229" width="354" height="22"/>
+                                <rect key="frame" x="30" y="229" width="354" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKQ-E3-Swj">
-                                <rect key="frame" x="30" y="272" width="354" height="22"/>
+                                <rect key="frame" x="30" y="273" width="354" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1l-Zf-lP7">
-                                <rect key="frame" x="30" y="367" width="354" height="50"/>
+                                <rect key="frame" x="30" y="370" width="354" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9Uw-39-mkQ"/>
                                 </constraints>
                                 <state key="normal" title="Sign Up"/>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hXE-4V-1XP">
-                                <rect key="frame" x="30" y="315" width="354" height="22"/>
+                                <rect key="frame" x="30" y="317" width="354" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -212,7 +210,7 @@
             <objects>
                 <viewController id="rSy-6a-5Zl" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YoP-aW-Dko">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="xAM-Nn-hv8"/>
@@ -228,11 +226,11 @@
             <objects>
                 <viewController id="xk9-tm-z5c" customClass="GithubViewController" customModule="IVIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lmP-aD-Ab8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="244-Ik-StX">
-                                <rect key="frame" x="25" y="144" width="364" height="569"/>
+                                <rect key="frame" x="25" y="100" width="364" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8Ao-Q6-XCV">
                                     <size key="itemSize" width="136" height="154"/>
@@ -334,7 +332,7 @@
             <objects>
                 <viewController id="pTZ-nu-Uov" customClass="ETCViewController" customModule="IVIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MlS-yD-OSA">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibJ-tj-v9T">
@@ -360,7 +358,7 @@
             <objects>
                 <viewController id="9kS-ou-BgC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jQ5-FC-lWM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sup-Gl-aPV"/>
@@ -374,9 +372,9 @@
         <!--일정-->
         <scene sceneID="ZLF-Xb-VkT">
             <objects>
-                <viewController id="Ypg-Ea-d2p" sceneMemberID="viewController">
+                <viewController id="Ypg-Ea-d2p" customClass="FireStoreViewController" customModule="IVIS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B90-VR-SoO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="VJ6-sz-wAJ"/>

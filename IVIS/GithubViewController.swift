@@ -14,6 +14,7 @@ class GithubViewController: UIViewController {
 
     @IBOutlet weak var gitHubCollectionView: UICollectionView!
     var githubList: [GitHubModel] = []
+    var githubListReal: [GitHubModel] = []
     
     @IBOutlet weak var userLabel: UILabel!
     @IBAction func logout(_ sender: Any) {
@@ -42,6 +43,8 @@ class GithubViewController: UIViewController {
 //            print ("Error signing out: %@", signOutError)
 //        }
 //        dismiss(animated: true, completion: nil)
+        
+        
         
         if let user = Auth.auth().currentUser {
             let uid = user.uid
