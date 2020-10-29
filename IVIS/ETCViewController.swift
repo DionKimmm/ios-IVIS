@@ -15,7 +15,38 @@ import FirebaseFirestore
 class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     var db: Firestore!
+    @IBOutlet weak var githubURLTextField: UITextField!
     
+    @IBAction func addGithubURLButton(_ sender: Any) {
+        guard let githubURL = self.githubURLTextField.text else {
+            print("깃허브 주소를 입력해주세요.")
+            return
+        }
+        if let user = Auth.auth().currentUser {
+            db = Firestore.firestore()
+            let uid = user.uid
+            let email = user.email
+            let displayName = user.displayName
+            
+            
+            print("db 접근 완료")
+            self.db.collection("users").document(uid).updateData([
+                "uid": uid,
+                "email": email!,
+                "githubURL": githubURL,
+                "displayName": displayName!
+            ]) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Document successfully written!")
+                }
+            }
+            print("프로필 작성 완료")
+        } else {
+            
+        }
+    }
     @IBAction func profileUpload(_ sender: Any) {
         
         let imagePick = UIImagePickerController()
@@ -26,6 +57,13 @@ class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINa
         
         self.present(imagePick, animated: true, completion: nil)
     }
+    
+    // MARK:- viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+    }
+    
+    // MARK:- viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -121,10 +159,12 @@ class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINa
             let uid = user.uid
             let email = user.email
             let photoURL = user.photoURL?.absoluteString
+            let displayName = user.displayName
             db = Firestore.firestore()
             
             
-            let imageName: String = uid + ".jpg"
+//            let imageName: String = uid + ".jpg"
+            let imageName: String = displayName! + ".jpg"
             
             // 파이어스토리지 저장소 참조 만들기
             let profileRef = Storage.storage()
@@ -150,11 +190,9 @@ class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINa
                     // 데이터베이스
                     
                     print("db 접근 완료")
+//                    self.db.collection("users").document(uid).updateData([
                     self.db.collection("users").document(uid).setData([
-                        "uid": uid,
-                        "email": email!,
-                        "profileImageUrl": profileURL,
-                        "githubUrl": photoURL!
+                        "profileImageURL": profileURL,
                     ]) { err in
                         if let err = err {
                             print("Error writing document: \(err)")
@@ -162,7 +200,7 @@ class ETCViewController: UIViewController, UIImagePickerControllerDelegate, UINa
                             print("Document successfully written!")
                         }
                     }
-                    print("데이터 생성 완료")
+                    print("이미지 등록 완료")
                 }
             }
             

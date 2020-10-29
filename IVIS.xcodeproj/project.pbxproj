@@ -12,7 +12,6 @@
 		0FA360BA24629115006A2073 /* GitHubCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */; };
 		0FA360BB24629115006A2073 /* GithubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B524629114006A2073 /* GithubViewController.swift */; };
 		0FA360BC24629115006A2073 /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B624629114006A2073 /* GitHubModel.swift */; };
-		0FA360BD24629115006A2073 /* GitHubSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B724629114006A2073 /* GitHubSafariViewController.swift */; };
 		0FA360BE24629115006A2073 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B824629114006A2073 /* Common.swift */; };
 		0FA360BF24629115006A2073 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA360B924629115006A2073 /* CollectionViewController.swift */; };
 		0FF4C59E2456A7020034BB80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF4C59D2456A7020034BB80 /* AppDelegate.swift */; };
@@ -22,6 +21,8 @@
 		0FF4C5A82456A7050034BB80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FF4C5A62456A7050034BB80 /* LaunchScreen.storyboard */; };
 		0FF4C5B02456A8400034BB80 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF4C5AF2456A8400034BB80 /* SignInViewController.swift */; };
 		0FF4C5B22456AAB80034BB80 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF4C5B12456AAB80034BB80 /* SignUpViewController.swift */; };
+		0FF884A62549591300733CBC /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF884A52549591300733CBC /* UserDTO.swift */; };
+		0FF884A8254A49EE00733CBC /* GitHubSafariViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FF884A7254A49EE00733CBC /* GitHubSafariViewController.swift */; };
 		CA0BCF448267AC38840FB2B4 /* Pods_IVIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4A3E83CEEE0BBF5C2BF9FF0 /* Pods_IVIS.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +32,6 @@
 		0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubCollectionViewCell.swift; sourceTree = "<group>"; };
 		0FA360B524629114006A2073 /* GithubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubViewController.swift; sourceTree = "<group>"; };
 		0FA360B624629114006A2073 /* GitHubModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
-		0FA360B724629114006A2073 /* GitHubSafariViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubSafariViewController.swift; sourceTree = "<group>"; };
 		0FA360B824629114006A2073 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		0FA360B924629115006A2073 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		0FF4C59A2456A7020034BB80 /* IVIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IVIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +43,8 @@
 		0FF4C5A92456A7050034BB80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FF4C5AF2456A8400034BB80 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		0FF4C5B12456AAB80034BB80 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		0FF884A52549591300733CBC /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		0FF884A7254A49EE00733CBC /* GitHubSafariViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubSafariViewController.swift; sourceTree = "<group>"; };
 		2B48C6E3F81A925F1BC01195 /* Pods-IVIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVIS.debug.xcconfig"; path = "Target Support Files/Pods-IVIS/Pods-IVIS.debug.xcconfig"; sourceTree = "<group>"; };
 		E4A3E83CEEE0BBF5C2BF9FF0 /* Pods_IVIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IVIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3974B0641ADEF02E227B6C0 /* Pods-IVIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IVIS.release.xcconfig"; path = "Target Support Files/Pods-IVIS/Pods-IVIS.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +96,6 @@
 				0FA360B824629114006A2073 /* Common.swift */,
 				0FA360B424629113006A2073 /* GitHubCollectionViewCell.swift */,
 				0FA360B624629114006A2073 /* GitHubModel.swift */,
-				0FA360B724629114006A2073 /* GitHubSafariViewController.swift */,
 				0FA360B524629114006A2073 /* GithubViewController.swift */,
 				0FF4C59D2456A7020034BB80 /* AppDelegate.swift */,
 				0FF4C59F2456A7020034BB80 /* ViewController.swift */,
@@ -106,6 +107,8 @@
 				0FF4C5B12456AAB80034BB80 /* SignUpViewController.swift */,
 				0F439A502456F27C00E15417 /* GoogleService-Info.plist */,
 				0F181C04247D127800C2FDC1 /* ETCViewController.swift */,
+				0FF884A52549591300733CBC /* UserDTO.swift */,
+				0FF884A7254A49EE00733CBC /* GitHubSafariViewController.swift */,
 			);
 			path = IVIS;
 			sourceTree = "<group>";
@@ -258,10 +261,11 @@
 				0FF4C5B22456AAB80034BB80 /* SignUpViewController.swift in Sources */,
 				0FA360BB24629115006A2073 /* GithubViewController.swift in Sources */,
 				0FA360BF24629115006A2073 /* CollectionViewController.swift in Sources */,
+				0FF884A62549591300733CBC /* UserDTO.swift in Sources */,
 				0FA360BE24629115006A2073 /* Common.swift in Sources */,
 				0FA360BC24629115006A2073 /* GitHubModel.swift in Sources */,
 				0FA360BA24629115006A2073 /* GitHubCollectionViewCell.swift in Sources */,
-				0FA360BD24629115006A2073 /* GitHubSafariViewController.swift in Sources */,
+				0FF884A8254A49EE00733CBC /* GitHubSafariViewController.swift in Sources */,
 				0FF4C5B02456A8400034BB80 /* SignInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

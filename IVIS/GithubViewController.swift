@@ -12,9 +12,14 @@ import Firebase
 
 class GithubViewController: UIViewController {
 
+    var db: Firestore!
+    
     @IBOutlet weak var gitHubCollectionView: UICollectionView!
     var githubList: [GitHubModel] = []
     var githubListReal: [GitHubModel] = []
+    var array : [UserDTO] = []
+    var uidKey : [String] = []
+    var count = 0
     
     @IBOutlet weak var userLabel: UILabel!
     @IBAction func logout(_ sender: Any) {
@@ -25,16 +30,74 @@ class GithubViewController: UIViewController {
         }
         dismiss(animated: true, completion: nil)
     }
+    
+    //MARK:- viewWillAppear()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        
+        print("***************************************")
+        print("***************************************")
+        print("viewWillAppear 실행")
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                print("***************************************")
+                print("***************************************")
+                print("유저 수 => \(querySnapshot!.count)")
+                self.githubList.removeAll()
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    print("\(document.documentID) => \(document.data()["displayName"]!)")
+                    print("깃허브 URL => \(document.data()["profileImageURL"]!)")
+                    let url = URL(string: "\(document.data()["profileImageURL"]!)")
+                    let data = try! Data(contentsOf: url!)
+                    
+                    self.githubList.append(GitHubModel.init(name: "\(document.data()["displayName"]!)", photo: UIImage(data: data), url: "\(document.data()["githubURL"]!)"))
+                    
+                    
+                    
+                }
+                print("***************************************")
+                print("***************************************")
+            }
+        }
+        gitHubCollectionView.reloadData()
+        print(githubList)
+    }
+    
+    //MARK:- viewDidLoad()
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        db = Firestore.firestore()
+
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.githubList.removeAll()
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    print("\(document.documentID) => \(document.data()["displayName"]!)")
+                    let url = URL(string: "\(document.data()["profileImageURL"]!)")
+                    let data = try! Data(contentsOf: url!)
+                    
+                    self.githubList.append(GitHubModel.init(name: "\(document.data()["displayName"]!)", photo: UIImage(data: data), url: "\(document.data()["githubURL"]!)"))
+                    
+                    
+                    
+                }
+            }
+        }
+        
         //dummy data
-        let github_kdw14 = GitHubModel.init(name: "14김동욱", photo: UIImage(named: "14김동욱"), url:"https://github.com/Dionkimmm")
-        let github_kdw15 = GitHubModel.init(name: "15김동욱", photo: nil, url: "")
-        let github_pjy = GitHubModel.init(name: "박정용", photo: nil, url: "")
-        githubList.append(github_kdw14)
-        githubList.append(github_kdw15)
-        githubList.append(github_pjy)
+//        let github_kdw14 = GitHubModel.init(name: "14김동욱", photo: UIImage(named: "14김동욱"), url:"https://github.com/Dionkimmm")
+//        let github_kdw15 = GitHubModel.init(name: "15김동욱", photo: nil, url: "")
+//        let github_pjy = GitHubModel.init(name: "박정용", photo: nil, url: "")
+//        githubList.append(github_kdw14)
+//        githubList.append(github_kdw15)
+//        githubList.append(github_pjy)
         
 //        // 로그인 되어 있으면 로그아웃하고 실행하기 - 왜 안되지????
 //        do {
@@ -101,6 +164,7 @@ extension GithubViewController: UICollectionViewDelegateFlowLayout {
 extension GithubViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return githubList.count
+        //return array.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -109,6 +173,12 @@ extension GithubViewController: UICollectionViewDataSource{
         
         cell.gitHubName.text = githubList[indexPath.row].name
         cell.gitHubImageView.image = githubList[indexPath.row].photo
+        
+        print("***********************")
+        print("***********************")
+        print(githubList)
+        print("***********************")
+        print("***********************")
         
         
         
